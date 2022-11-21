@@ -5,7 +5,7 @@
 // Sample Output 1
 
 // 0
-
+//this question solved using map 
 
 function maximumOccuringElement(A,N){
    
