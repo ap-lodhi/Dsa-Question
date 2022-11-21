@@ -16,18 +16,8 @@
 // 1<=n<=10^6
 
 // 1<=k<=10^6
-
-
-
-
-
-
-
-
 // Output
 // Print count of substrings of length k with k distinct letters
-
-
 // Sample Input 1 
 
 // 4 2
@@ -59,6 +49,7 @@ function distict_L(arr, l, k){
         }else{
             return false;
         }
+        console.log(map)
     }
     map = new Map();
     return true;
@@ -109,3 +100,5 @@ if (process.env.USER === "sony") {
     process.exit(0);
   });
 }
+var ans  = runProgram(`4 2
+abcc`)
