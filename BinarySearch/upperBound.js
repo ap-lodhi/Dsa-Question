@@ -96,3 +96,8 @@ if (process.env.USER === "sony") {
     process.exit(0);
   });
 }
+
+
+var str = 'anil'
+
+console.log(str)
