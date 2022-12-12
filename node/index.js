@@ -1,13 +1,13 @@
-// const http= require("http")
-// const server = http.createServer((req,res)=>{
-//  //all the request will be handled here 
-//  res.end('hello anil ')
-// })
+const http= require("http")
+const server = http.createServer((req,res)=>{
+ //all the request will be handled here 
+ res.end('hello anil ')
+})
 
-// server.listen(3000)//  
+server.listen(3000)//  
 
-// const  x  =require('fs')
-// console.log(x)
+const  x  =require('fs')
+console.log(x)
 
 
 // 1. js Expression 
@@ -23,19 +23,19 @@ const { buffer } = require('stream/consumers')
 
 
 // crrating new file 
-// fs.writeFileSync('reas.txt',"welcome to node js series")
+fs.writeFileSync('reas.txt',"welcome to node js series")
 
 
 // update new  
-// fs.writeFileSync('reas.txt',"with thapa ")
+fs.writeFileSync('reas.txt',"with thapa ")
 
 // updating data 
-// fs.appendFileSync('reas.txt',"hii .....")
+fs.appendFileSync('reas.txt',"hii .....")
 
-//  const  buf_data= fs.readFileSync('reas.txt',)
+ const  buf_data= fs.readFileSync('reas.txt',)
 
-//  org_data =buf_data.toString();
-//  console.log(org_data)
+ org_data =buf_data.toString();
+ console.log(org_data)
 
  
 
