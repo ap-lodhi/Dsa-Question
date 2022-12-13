@@ -1,25 +1,16 @@
-const fs = require('fs')
+const fs =require('fs')
 
 
-fs.writeFile('read.txt', "today is awesome day ", (err)=>{
-    console.log(('file is created'))
-    console.log(err)
+//this the synchronous way of reading file  in that  method  it  give the result  whatever first call after second  will we excute 
+const  data =fs.readFileSync("read.txt", "utf-8");
+console.log(data)  //first print  
+
+console.log("after the  data")//second print
+
+fs.readFile("read.txt", "utf-8", (err,data)=>{
+    console.log(data) // second print 
+
+
 })
 
-
-
-//we pass them a function as an argument - a callback
-// This callback has an argument  that  tells  you wether  
-// Now  we need to say waht to do when  fs.writeFile
-// has (completed (even if it isnothing ,and start )
-// Checking for errors
-
-fs.appendFile('read.txt', "what a day ", (err)=>{
-    console.log("task updated")
-})
-
-
-
-fs.readFile('read.txt','utf8',(err,data)=>{
-    console.log(data)
-})
+console.log("after the  data")  // first print 
