@@ -1,23 +1,26 @@
 {
-    "student":[
+    "student": [
         {
-            "name":"chunnu",
-            "city":"delhi"
+            "name": "chunnu",
+            "city": "delhi"
         },
         {
-            
-            "name":"munnu",
-            "city":"manali"
+            "name": "munnu",
+            "city": "manali"
+        },
+        {
+            "name": "anil",
+            "city": "nsp"
         }
     ],
-    "teacher":[
+    "teacher": [
         {
-            "name":"ankush",
-            "sub":"DSA"
+            "name": "ankush",
+            "sub": "DSA"
         },
         {
-            "name":"albert",
-            "sub":"codding"
+            "name": "albert",
+            "sub": "codding"
         }
     ]
 }

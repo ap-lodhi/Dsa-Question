@@ -30,11 +30,17 @@ app.get("/allStudents",(req,res)=>{
 
 
 app.post("/addStudent",(req,res)=>{
+
+    //reading the file 
     const  data = fs.readFileSync("./db.json","utf-8");
+    //paesing the data 
     const parse = JSON.parse(data)
+    // adding the data new student
     parse.student.push(req.body)
-    console.log("data added successfully")
-    res.send(parse)
+    //write it in the file 
+    fs.writeFileSync('./db.json', JSON.stringify(parse))
+    // console.log("data added successfully")
+    res.send("added successfuly")
 
 })
 
