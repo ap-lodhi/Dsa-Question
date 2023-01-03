@@ -45,6 +45,24 @@ app.post("/addStudent",(req,res)=>{
 })
 
 
+
+app.post("/addTeacher",(req,res)=>{
+
+    //reading the file 
+    const  data = fs.readFileSync("./db.json","utf-8");
+    //paesing the data 
+    const parse = JSON.parse(data)
+    // adding the data new student
+    parse.teacher.push(req.body)
+    //write it in the file 
+    fs.writeFileSync('./db.json', JSON.stringify(parse))
+    // console.log("data added successfully")
+    res.send("added successfuly")
+
+})
+
+
+
 app.listen(3500,()=>{
     console.log('server is listening on port  3500')
 })
