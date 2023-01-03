@@ -20,8 +20,23 @@ app.get("/allData",(req,res)=>{
     res.send(parse)
 })
 
+app.get("/allStudents",(req,res)=>{
+    const  data = fs.readFileSync("./db.json","utf-8");
+    const parse = JSON.parse(data)
+    console.log(parse.student)
+    res.send(parse.student)
+    
+})
 
-app.post()
+
+app.post("/addStudent",(req,res)=>{
+    const  data = fs.readFileSync("./db.json","utf-8");
+    const parse = JSON.parse(data)
+    parse.student.push(req.body)
+    console.log("data added successfully")
+    res.send(parse)
+
+})
 
 
 app.listen(3500,()=>{
