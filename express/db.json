@@ -1,0 +1,23 @@
+{
+    "student":[
+        {
+            "name":"chunnu",
+            "city":"delhi"
+        },
+        {
+            
+            "name":"munnu",
+            "city":"manali"
+        }
+    ],
+    "teacher":[
+        {
+            "name":"ankush",
+            "sub":"DSA"
+        },
+        {
+            "name":"albert",
+            "sub":"codding"
+        }
+    ]
+}
