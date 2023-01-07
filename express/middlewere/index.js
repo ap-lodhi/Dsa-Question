@@ -2,8 +2,10 @@ const express=require("express")
 const app=express()
 //Our first middleware
 app.use((req,res,next)=>{
+
 console.log("Hello from Middleware")
 next()
+res.send("this the  middlewere rout ")
 })
 app.get("/",(req,res)=>{
 console.log("Hello from the base route")
