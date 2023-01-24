@@ -13,25 +13,25 @@
 <body>
     
 </body>
-<script>
+<script src="./throtling.js">
 
-    const makeApicall=()=>{
-        console.log("api call ")
-    }
-    let c =0;
-    const debouncer =(fn,delay)=>{
-        // should remeber if the  call is called
-        let debouncing
-        return function(){
-            console.log(c++)
-            debouncing && clearTimeout(debouncing)
-          debouncing =  setTimeout(()=>fn.apply(this,arguments),delay)
-        }
-    }
-window.addEventListener("load",function(){
-    var btn = document.getElementById('click');
-    btn.addEventListener('click',debouncer(makeApicall,1000))
-})
+//     const makeApicall=()=>{
+//         console.log("api call ")
+//     }
+//     let c =0;
+//     const debouncer =(fn,delay)=>{
+//         // should remeber if the  call is called
+//         let debouncing
+//         return function(){
+//             console.log(c++)
+//             debouncing && clearTimeout(debouncing)
+//           debouncing =  setTimeout(()=>fn.apply(this,arguments),delay)
+//         }
+//     }
+// window.addEventListener("load",function(){
+//     var btn = document.getElementById('click');
+//     btn.addEventListener('click',debouncer(makeApicall,1000))
+// })
 
 
 </script>
