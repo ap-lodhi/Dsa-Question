@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="header">
 
-
-/**Debouncing is a programming pattern or a technique to restrict the calling of a time-consuming function frequently, 
- * by delaying the execution of the function until a specified time to avoid unnecessary CPU cycles, 
- * and API calls and improve performance. */
+</h1>
+<button id="click"> click ME</button>
+<body>
+    
+</body>
+<script>
 
     const makeApicall=()=>{
         console.log("api call ")
@@ -21,3 +32,7 @@ window.addEventListener("load",function(){
     var btn = document.getElementById('click');
     btn.addEventListener('click',debouncer(makeApicall,1000))
 })
+
+
+</script>
+</html>
