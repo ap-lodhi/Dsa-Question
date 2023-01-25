@@ -1,3 +1,4 @@
+// throtlling 
 const makeApicall=()=>{
     console.log("api call ")
 }
