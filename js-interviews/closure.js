@@ -36,17 +36,47 @@ inner function  */
 
 
 
-function calculator(intiValue =0){
-    var value = intiValue;
+// function calculator(intiValue =0){
+//     var value = intiValue;
 
-    function add(val){
-        value =value +val
-    }
-    return {add}
-}
-var calc = calculator()
-console.log(calc.add(10))
+//     function add(val){
+//         value =value +val
+//     }
+//     return {add}
+// }
+// var calc = calculator()
+// console.log(calc.add(10))
 
 // memoization 
 // debouncing 
 // throtling 
+
+
+var arr = [1,2,3,4,5]
+
+// for(var i=0; i<arr.length; i++){
+//   setTimeout(()=>console.log(arr[i],i),i*1000)
+// }
+
+// console.log('value of i after for loop',i)
+
+// expected
+// 1 0
+// 2 1
+// 3 2
+// 4 3
+// 5 4
+
+// value is 
+// undefined 5 -> 5 times -> 1 sec intervals
+
+
+
+  
+for(var i=0; i<arr.length; i++){
+  setTimeout(function(i){
+   	return function(){
+      console.log(arr[i],i)
+    } 
+  }(i),i*1000)
+}
