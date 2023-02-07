@@ -25,13 +25,13 @@ inner function  */
 // currying
 
 
-// function outer(a){
+function outer(a){
    
-//     return function inner(b){
-//         return a+b;
-//     }
-// }
-// console.log(outer(5)(20))
+    return function inner(b){
+        return a+b;
+    }
+}
+console.log(outer(5)(20))
 
 
 
@@ -52,9 +52,9 @@ inner function  */
 // throtling 
 
 
-var arr = [1,2,3,4,5]
+// var arr = [1,2,3,4,5]
 
-// for(var i=0; i<arr.length; i++){
+// for(let i=0; i<arr.length; i++){
 //   setTimeout(()=>console.log(arr[i],i),i*1000)
 // }
 
@@ -73,10 +73,19 @@ var arr = [1,2,3,4,5]
 
 
   
-for(var i=0; i<arr.length; i++){
-  setTimeout(function(i){
-   	return function(){
-      console.log(arr[i],i)
-    } 
-  }(i),i*1000)
-}
+// for(var i=0; i<arr.length; i++){
+//   setTimeout(function(i){
+//    	return function(){
+//       console.log(arr[i],i)
+//     } 
+//   }(i),i*1000)
+// }
+
+
+// function display(i){
+//     setTimeout(()=>console.log(this[i],i),i*1000)
+// }
+
+// for(var i=0; i<arr.length; i++){
+//     display.call(arr,i)
+// }

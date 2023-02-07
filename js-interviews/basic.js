@@ -23,7 +23,7 @@ console.log(NaN ===NaN) // false
 
 
 console.log(  "arayy ",[]==[])  // false 
-console.log(  "arayy ",[]==[])  // false 
+console.log(  "arayy ",[]===[])  // false 
 console.log("obj",{}=={}) //false 
 console.log("obj",{}==={})//false  it  may be contain same  data  point  
  
