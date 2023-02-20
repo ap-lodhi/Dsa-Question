@@ -25,13 +25,13 @@ inner function  */
 // currying
 
 
-function outer(a){
+// function outer(a){
    
-    return function inner(b){
-        return a+b;
-    }
-}
-console.log(outer(5)(20))
+//     return function inner(b){
+//         return a+b;
+//     }
+// }
+// console.log(outer(5)(20))
 
 
 
@@ -87,5 +87,21 @@ console.log(outer(5)(20))
 // }
 
 // for(var i=0; i<arr.length; i++){
-//     display.call(arr,i)
-// }
+// //     display.call(arr,i)
+// // }
+// for (var i = 0; i < 3; i++) {
+
+//     setTimeout(function() { alert(i); }, 1000 + i);
+  
+//   }
+(function() {
+
+    var a = b = 5;
+  
+  })();
+  console.log(b)
+  var  _name = 5
+  console.log(_name)
+  var x = 4 + "4";
+
+console.log(x);

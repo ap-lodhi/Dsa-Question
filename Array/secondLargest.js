@@ -1,4 +1,4 @@
-var arr =[1,2,4,2,6,5]
+var arr =[1,2,4,2,6,5  ,12]
 var first  =-1; 
 var second = -1; 
 for(var  i=0; i<arr.length; i++){
