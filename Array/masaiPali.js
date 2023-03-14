@@ -35,7 +35,7 @@
 // The given string contains a palindromic substring which is, "racecar" and it is of largest length(7) among all other palindromic substrings.
 
 // Hence the output is 7 
-
+// first calcultae  
 function masaiPalSubString(S){
     //write code here 
     function isPalindrome(str){
