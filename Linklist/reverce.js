@@ -63,3 +63,4 @@ function reverse(head) {
     return head
 }
 
+console.log(first)
