@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 500px;
+            width: 400px;
+            background-color: teal;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"    onmousemove="showCount()">
+        <h1 id="nCnt">normal count:<span>0</span></h1>
+        <h1 id="tCnt">throtle count:<span>0</span></h1>
+        <h1 id="dCnt"> debounce count:<span>0</span></h1>
+
+    </div>
+</body>
+
+</html>
+<script>
+    let nCount=0;
+    let tCount=0;
+    let fireThrottle = true;
+    let dTimer  
+    let dCount=0
+   function showCount(){
+    normalCount()
+
+
+    throttleCount();
+
+    debounceCount()
+   } 
+
+   function normalCount(){
+    nCount++;
+    document.querySelector("#nCnt>span").innerHTML =nCount
+   }
+
+   function throttleCount(){
+    if(fireThrottle){
+
+        tCount++;
+        document.querySelector("#tCnt>span").innerHTML =tCount
+        fireThrottle=false
+        setTimeout(()=>{
+            fireThrottle =true
+        },500)
+    }
+   }
+
+   function debounceCount(){
+    clearTimeout(dTimer)
+    dTimer = setTimeout(()=>{
+        dCount++
+        document.querySelector("#dCnt>span").innerHTML =dCount
+
+    },500)
+
+   }
+</script>
