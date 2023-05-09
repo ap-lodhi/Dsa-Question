@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter OOPs</title>
+</head>
+<body>
+    <h1 id="counter"> Count: 0</h1>
+    <button onclick="reduce()" >Reduce</button>
+    <button onclick="add()" >Add</button>
+</body>
+</html>
+<script>
+    class Counter{
+        #counter;
+        constructor(intialValue){
+            this.#counter =intialValue;
+        }
+        get counterValue(){
+            return this.#counter;
+        }
+        set addValue(newValue){
+            this.#counter =this.#counter +newValue
+        }
+        set reduceValue(newValue){
+            this.#counter =this.#counter-newValue
+        }
+    }
+
+    const counter  = new Counter(10);
+
+    function add(){
+        counter.addValue =1
+        document.getElementById("counter").innerText = `Counter: ${counter.counterValue}`
+    }
+
+    function reduce(){
+        counter.reduceValue = 1
+        
+        document.getElementById("counter").innerText = `Counter: ${counter.counterValue}`
+    }
+
+    window.onload=()=>{
+        document.getElementById("counter").innerText = `Counter: ${counter.counterValue}`
+    }
+</script>
