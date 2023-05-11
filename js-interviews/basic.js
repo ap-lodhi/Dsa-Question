@@ -51,7 +51,7 @@ console.log("A" - "B" + 2);
 // console.log(typeof typeof x);
 
 
-var b = 1;
+// var b = 1;
 function outer(){
  	var b = 2
   	function inner(){
@@ -81,5 +81,28 @@ console.log('true' == true);
 console.log(false == 'false');
 
 
+var x = 10 
+function foo(){
+	console.log(x)
+}
+function bar(){
+	var x = 5
+	console.log(x)
+	foo()
+}
+bar()
 
+
+function outer() {
+  var x = 10;
+  // console.log(x)
+
+  return function () {
+    var x = 5;
+    console.log(x);
+  };
+}
+var cal = outer();
+var x = 5;
+cal();
 
