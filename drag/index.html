@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            cursor: move;
+        }
+
+        .item.dragging {
+            opacity: 0.5;
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="container1" class="container1">
+            <div class="item" draggable="true">Item 1</div>
+            <div class="item" draggable="true">Item 2</div>
+            <div class="item" draggable="true">Item 3</div>
+        </div>
+        <div id="container2" class="container2"></div>
+    </div>
+    <div class="success-message" id="successMessage"></div>
+
+    <button onclick="resetContainers()">Reset</button>
+
+    <script>
+        // Function to handle dragging of items
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+            event.target.classList.add("dragging");
+        }
+
+        // Function to handle dropping of items
+        function drop(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text");
+            const draggedItem = document.getElementById(data);
+            const container2 = document.getElementById("container2");
+
+            container2.appendChild(draggedItem);
+            draggedItem.classList.remove("dragging");
+
+            const successMessage = document.getElementById("successMessage");
+            successMessage.innerText = "Item dropped successfully!";
+        }
+
+        // Function to prevent default behavior when dragging over elements
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        // Function to reset the containers and success message
+        function resetContainers() {
+            const container1 = document.getElementById("container1");
+            const container2 = document.getElementById("container2");
+            const successMessage = document.getElementById("successMessage");
+
+            container2.innerHTML = "";
+            successMessage.innerText = "";
+
+            // Reattach drag event listeners to items in container1
+            const items = container1.getElementsByClassName("item");
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener("dragstart", drag);
+            }
+        }
+
+        // Attach drag event listeners to items in container1
+        const container1 = document.getElementById("container1");
+        const items = container1.getElementsByClassName("item");
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener("dragstart", drag);
+        }
+
+        // Attach drop event listener to container2
+        const container2 = document.getElementById("container2");
+        container2.addEventListener("drop", drop);
+        container2.addEventListener("dragover", allowDrop);
+    </script>
+</body>
+</html>
