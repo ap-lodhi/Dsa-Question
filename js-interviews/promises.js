@@ -33,3 +33,8 @@ console.log(set)  // will remove duplicate
 // console.log(res)
 
 
+// console.log(Promise.resolve(4))
+// console.warn(Promise.resolve(4)) // promise fullfilled 
+
+
+console.log(`${(x=>X)('i love')} to programing`)
