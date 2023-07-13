@@ -5,3 +5,7 @@ var arr1  = []  //empty arr
 
 
   console.log(typeof  arr1== typeof {}) /// true 
+
+
+
+  console.log({} === {})
