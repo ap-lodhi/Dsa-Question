@@ -1,0 +1,59 @@
+1. git init: Initializes a new Git repository.
+
+2. git clone: Creates a copy of an existing Git repository.
+
+3. git add: Adds changes to the staging area.
+
+4. git commit: Commits changes to the repository.
+
+5. git status: Shows the status of the repository.
+
+6. git log: Shows the commit history of the repository.
+
+7. git branch: Lists or creates branches.
+
+8. git checkout: Switches to a different branch or commit.
+
+9. git merge: Merges changes from one branch into another.
+
+10. git remote: Manages remote repositories.
+
+11. git push: Pushes changes to a remote repository.
+
+12. git pull: Fetches changes from a remote repository and merges them into the local repository.
+
+13. git fetch: Fetches changes from a remote repository.
+
+14. git reset: Resets the repository to a previous state.
+
+15. git revert: Reverts a commit.
+
+16. git stash: Stashes changes to be applied later.
+
+17. git tag: Creates a tag for a specific commit.
+
+18. git diff: Shows the differences between two commits or branches.
+
+19. git blame: Shows who last modified each line of a file.
+
+20. git show: Shows information about a specific commit.
+
+21. git grep: Searches for a pattern in the repository.
+
+22. git config: Configures Git settings.
+
+23. git rm: Removes files from the repository.
+
+24. git mv: Moves or renames files in the repository.
+
+25. git archive: Creates an archive of the repository.
+
+26. git bisect: Helps find the commit that introduced a bug.
+
+27. git cherry-pick: Applies a specific commit to the current branch.
+
+28. git rebase: Reapplies commits on top of another branch.
+
+29. git submodule: Manages submodules within the repository.
+
+30. git log --graph: Shows the commit history of the repository as a graph.
