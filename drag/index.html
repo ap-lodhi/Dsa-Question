@@ -97,3 +97,82 @@
     </script>
 </body>
 </html>
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+import { SearchIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Input,
+  InputGroup,
+  InputLeftElement,
+ 
+} from "@chakra-ui/react";
+
+import { useEffect, useState } from "react";
+
+const SearchBar = () => {
+  const [query, setQuery] = useState("");
+  const [schools, setSchools] = useState([]);
+  console.log(schools);
+  useEffect(() => {
+    fetchSchools();
+  }, [query]);
+
+  const fetchSchools = async () => {
+    try {
+      var res = await fetch(
+        `http://localhost:5000/api/v1/getschools/reqbysearch?q=${query}`
+      );
+      const data = await res.json();
+      setSchools(data);
+
+      // console.log(data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleInputChange = (e: any) => {
+    setQuery(e.target.value);
+  };
+  return (
+    <>
+    <Box w={"860px"}>
+      <InputGroup borderRadius={"20px"} bg={"#F6F4F4"} p={"1"}>
+        <InputLeftElement>
+          <SearchIcon color={"#686868"} mt={"1"} ml={"8"} w="20px" h={"20px"} />
+        </InputLeftElement>
+        <Input
+          onChange={handleInputChange}
+          value={query}
+          border={"none"}
+          variant={"filled"}
+          borderRadius={"20px"}
+          placeholder="Search For Schools"
+          color={"#686868"}
+          bg={"#F6F4F4"}
+          fontSize={"lg"}
+          ml={"6"}
+          _hover={{ bg: "none" }}
+          />
+      </InputGroup>
+     
+    </Box>
+    
+          </>
+      
+  );
+};
+
+export default SearchBar;
