@@ -319,3 +319,204 @@ let y = x.flat();
 
 console.log(x);
 console.log(y);
+
+
+
+
+
+
+const x = [1, 2, 3, 4];
+
+x.unshift(0);
+
+console.log(x);
+
+
+
+
+
+
+
+let x = { b: 1, c: 2 };
+
+let y = Object.keys(x);
+
+console.log(y.length);
+
+
+
+
+let x = [1, 2, 3];
+let y = [...x];
+let z = y.map((val) => val * 2);
+z[1] = 8;
+
+console.log(z);
+
+
+
+
+
+let x = true;
+let y = false;
+let z = x + y && x * y;
+
+console.log(z);
+
+
+
+
+
+let x = [1, 2, 3];
+let [, , y] = x;
+console.log(y);
+
+
+
+
+
+
+let x = [1, 2, 3];
+
+let y = x.map((num) => {
+  x.push(num + 3);
+  return num + 1;
+});
+
+console.log(y);
+
+
+
+
+
+let a = [1, 2, 3];
+a.push(a[2]++);
+
+console.log(a);
+
+
+
+
+
+
+let x = {
+  y: "z",
+  print: () => {
+    return this.y === "z";
+  },
+};
+
+console.log(x.print());
+
+
+
+
+
+setTimeout(() => {
+  console.log(1);
+}, 0);
+
+console.log(2);
+
+
+
+
+
+
+let x = [null, 0, "0", false, "a"];
+let y = x.filter((val) => val);
+console.log(y);
+
+
+
+
+
+let x = 6;
+let y = typeof (x == 6);
+console.log(y);
+
+
+
+
+
+
+let x = [31, 2, 8];
+
+x.sort();
+console.log(x);
+
+
+
+let x = "one";
+console.log(Number(x));
+
+
+let x = "8";
+let y = +x;
+
+console.log(y);
+console.log(typeof y);
+
+
+
+const arr = [1, 2, 3];
+arr.length = 0;
+arr.push(4);
+
+console.log(arr);
+
+let x = [1, 2, 3];
+let y = x.slice();
+y.push(4);
+
+console.log(x.length + y.length);
+
+
+
+
+const str = "How are you ?";
+
+console.log(str.startsWith("How"));
+console.log(str.endsWith("you ?"));
+console.log(str.endsWith("are", 7));
+
+
+
+
+
+
+const sealedObject = {
+  name: "Anshika Agarwal",
+  age: "25",
+};
+
+Object.seal(sealedObject);
+//Object.freeze(sealedObject);
+
+sealedObject.age = "26";
+
+console.log(sealedObject.age);
+
+
+
+
+
+
+
+
+
+function multiply(factor) {
+  return function (value) {
+    return value * factor;
+  };
+}
+
+const square = multiply(2);
+
+console.log(square(5));
+
+
+
+
+let { log } = console;
+log("Hello");
