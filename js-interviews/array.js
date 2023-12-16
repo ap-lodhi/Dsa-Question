@@ -8,4 +8,4 @@ var arr1  = []  //empty arr
 
 
 
-  console.log({} === {})
+  //console.log({} ==== {})
