@@ -1,19 +1,25 @@
 
+// console.log(typeof null);
 
+//console.log(1 ==="1")
 // undefined 
 
-console.log(undefined==null)  // true
-console.log(undefined===null)  // false
+// console.log(undefined==null)  // true
+// console.log(undefined===null)  // false
 
 
+for(let  i=0; i<5; i++){
+
+}
+console.log(i);
 
 //NAN
 
 
 // NaN (Not a Number) is a numeric data type that means an undefined value or value that cannot be represented
 //  especially results of floating-point calculations.
-console.log(NaN ==NaN)  // false
-console.log(NaN ===NaN) // false
+// console.log(NaN ==NaN)  // false
+// console.log(NaN ===NaN) // false
 
 
 
@@ -22,10 +28,10 @@ console.log(NaN ===NaN) // false
 // Object has  diffrent  address as such si it will not  be  equal 
 
 
-console.log(  "arayy ",[]==[])  // false 
-console.log(  "arayy ",[]===[])  // false 
-console.log("obj",{}=={}) //false 
-console.log("obj",{}==={})//false  it  may be contain same  data  point  
+// console.log(  "arayy ",[]==[])  // false 
+// console.log(  "arayy ",[]===[])  // false 
+// console.log("obj",{}=={}) //false 
+// console.log("obj",{}==={})//false  it  may be contain same  data  point  
  
 // console.log("2" + 2 - "1");
 
@@ -40,10 +46,10 @@ console.log("obj",{}==={})//false  it  may be contain same  data  point
 
 
 
-console.log(1 + "2" + "2");
-console.log(+"1" + "1" + "2");
-console.log("A" - "B" + "2");
-console.log("A" - "B" + 2);
+// console.log(1 + "2" + "2");
+// console.log(+"1" + "1" + "2");
+// console.log("A" - "B" + "2");
+// console.log("A" - "B" + 2);
 
 
 
@@ -52,57 +58,57 @@ console.log("A" - "B" + 2);
 
 
 // var b = 1;
-function outer(){
- 	var b = 2
-  	function inner(){
-          b++;
-          var b = 3;
-      	console.log(b)
-    }
-  	inner();
-}
-outer();
+// function outer(){
+//  	var b = 2
+//   	function inner(){
+//           b++;
+//           var b = 3;
+//       	console.log(b)
+//     }
+//   	inner();
+// }
+// outer();
 
 
 
-var a = [1, 2, 3];
-a[10] = 4;
-console.log(a.length);
-console.log(a);
+// var a = [1, 2, 3];
+// a[10] = 4;
+// console.log(a.length);
+// console.log(a);
 
 
-console.log(typeof null);
+// console.log(typeof null);
 
-console.log(typeof typeof 1);  // if we write two times  it will become string if we check one time type of it will give  Number 
-console.log("2" * "3");console.log("12" / "6");
-console.log("number" - 15);
-console.log("foo" + + "bar");
-console.log('true' == true);
-console.log(false == 'false');
-
-
-var x = 10 
-function foo(){
-	console.log(x)
-}
-function bar(){
-	var x = 5
-	console.log(x)
-	foo()
-}
-bar()
+// console.log(typeof typeof 1);  // if we write two times  it will become string if we check one time type of it will give  Number 
+// console.log("2" * "3");console.log("12" / "6");
+// console.log("number" - 15);
+// console.log("foo" + + "bar");
+// console.log('true' == true);
+// console.log(false == 'false');
 
 
-function outer() {
-  var x = 10;
-  // console.log(x)
+// var x = 10 
+// function foo(){
+// 	console.log(x)
+// }
+// function bar(){
+// 	var x = 5
+// 	console.log(x)
+// 	foo()
+// }
+// bar()
 
-  return function () {
-    var x = 5;
-    console.log(x);
-  };
-}
-var cal = outer();
-var x = 5;
-cal();
+
+// function outer() {
+//   var x = 10;
+//   // console.log(x)
+
+//   return function () {
+//     var x = 5;
+//     console.log(x);
+//   };
+// }
+// var cal = outer();
+// var x = 5;
+// cal();
 

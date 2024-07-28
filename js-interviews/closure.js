@@ -94,14 +94,48 @@ inner function  */
 //     setTimeout(function() { alert(i); }, 1000 + i);
   
 //   }
-(function() {
+// (function() {
 
-    var a = b = 5;
+//     var a = b = 5;
   
-  })();
-  console.log(b)
-  var  _name = 5
-  console.log(_name)
-  var x = 4 + "4";
+//   })();
+//   console.log(b)
+//   var  _name = 5
+//   console.log(_name)
+//   var x = 4 + "4";
 
-console.log(x);
+// console.log(x);
+
+// Example  of closure -- 
+// closure  related  to function 
+// there  should  be dependancy in child  function to parent  function 
+
+// function greet(){
+//   let  n = "Anil";
+
+//   return function(){
+//     console.log(n);
+//   }
+// }
+
+// var  x = greet();
+// x();
+
+
+
+function greet() {
+  let n = "Anil";
+
+  return function () {
+   
+    return function (){
+      console.log(n)
+    }
+  };
+}
+
+var x = greet();
+
+var  y = x();
+y()
+
