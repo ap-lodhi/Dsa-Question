@@ -32,8 +32,8 @@
 
 // Sample Input 1 
 
-// 1
-// 4 5
+// 1  T
+// 4 5  M & N
 // 2 5 6 8
 // 3 8 5 1 7
 // Sample Output 1
@@ -57,6 +57,14 @@ function possible(arr1,arr2){
     }
     return "YES";
 }
+
+// Sample Input 1 
+
+// 1  T
+// 4 5  M & N
+// 2 5 6 8
+// 3 8 5 1 7
+// Sample Output 1
 function runProgram(input) {
     input = input.split("\n");
    var t= +input[0]

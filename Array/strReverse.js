@@ -19,3 +19,12 @@ function reverse(str){
 var  arr = ["h", "e", "l", "l", "o"];
 
 console.log(reverse(arr))
+
+
+var a  = 10;
+var  b = 12 ;
+var temp 
+temp = a;
+a = b;
+b = temp;
+console.log(a,b)

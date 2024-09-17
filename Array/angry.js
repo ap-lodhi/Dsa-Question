@@ -52,6 +52,11 @@
 //       10
 
 // The adjacent pair values are 1 for(6-5),3 for(8-5),4 for(10-6),2 for(10-8).Since danger value is the maximum value so it's 4.
+// Sample Input 1 
+
+// 4
+// 5 10 6 8
+// Sample Output 1
 function runProgram(input) {
     input = input.split("\n");
    var n= +input[0]
